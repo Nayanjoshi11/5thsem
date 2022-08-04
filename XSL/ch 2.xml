@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<?<xml-stylesheet type='text/xsl' href='ch 2.xsl'?>
+
+    <student>
+        <name>Nayan Joshi</name>
+        <address>Satdobato,Lalitpur</address>
+        <age>22</age>
+        <sex>Male</sex>
+        <number>9818434264</number>
+    </student>
