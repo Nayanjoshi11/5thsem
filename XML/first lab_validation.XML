@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE student[
+
+    <!ELEMENT  student
+    (name,address,age,sex,number)>
+    <!ELEMENT  name 
+    (#PCDATA)>
+    <!ELEMENT address 
+    (#PCDATA)>
+    <!ELEMENT  age 
+    (#PCDATA)>
+    <!ELEMENT sex 
+    (#PCDATA)>
+    <!ELEMENT number 
+    (#PCDATA)>
+    ]> 
+
+    <student>
+        <name>Nayan Joshi</name>
+        <address>Satdobato,Lalitpur</address>
+        <age>22</age>
+        <sex>Male</sex>
+        <number>9818434264</number>
+    </student>
