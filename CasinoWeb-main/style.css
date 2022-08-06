@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    margin:0;
+    
+    color:#010304;
+    font-size: 17px;
+    line-height: 1.53;
+    font:17px/1.53 'Roboto', sans-serif;
+}
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+.banner-part{
+    /* height: 100vh; */
+    position: relative;
+    background: url('./images/banner-img.png') no-repeat center /cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-part::before{
+    content:'';
+    height:100vh;
+   
+}
+
+.banner-part::after {
+    content: '';
+    background-color: rgba(191,61,66,1);
+    mix-blend-mode: darken;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    
+}
+
+
+
+.bg-stretch{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* text inside banner part */
+.banner-content{
+    max-width:976px;
+    color:white;
+    position:relative;
+    z-index:9;
+    text-align: center;
+}
+
+.banner-content p{
+    margin:0;
+}
+
+.overline-text{
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 65px;
+    margin:0 0 45px;
+    text-transform: uppercase;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.btn.primary{
+    
+    padding:15px;
+    background-color: #333;
+    border: 2px solid white;
+    color:white;
+    min-width:230px;
+    border-radius: 30px;
+}
+
+.btn.secondary{
+    padding:15px;
+    background-color: rgb(191,61,66);
+    border: 2px solid white;
+    color:white;
+    min-width:180px;
+    border-radius: 30px;
+    
+}
+
+#header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    padding: 15px 50px;
+}
+
+#header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    order: 0;
+}
+
+.logo a{
+    display: inline-block;
+}
+
+/* about casino */
+
+.container{
+    max-width:1170px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.container.lg{
+    max-width: 1310px;
+}
+
+
+.about-part{
+    padding:120px 0;
+}
+
+h2{
+    font-size:35px;
+    line-height: 2;
+    font-weight: bold;
+    color:#010304;
+    text-transform: uppercase;
+    margin: 0 0 45px;
+}
+
+.style{
+    position: relative;
+    padding-left:44px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.style::after{
+    content:'';
+    width:42px;
+    height:42px;
+    position: absolute;
+    top:10px;
+    left:0;
+    background: url(./images/about-casino-logo.png) no-repeat center/cover;
+    display: block;
+}
+
+.two-columns,
+.four-columns {
+    display: flex;
+    flex-wrap:wrap;
+    margin:0 -20px;
+}
+
+.two-columns .col{
+    width:50%;
+    padding: 0 20px;
+}
+
+.two-columns .col .large-col{
+    width:58.33%;
+}
+
+.two-columns .col .small-col{
+    width:41.66%;
+}
+
+.four-columns .col{
+    width:auto;
+}
+
+
+.about-part .image-wrap{
+    position: relative;
+    /* dont use height and width  */
+    /* width:500px;
+    height:345px; */
+    padding-top:61%; /* 345(height)/500(width) = 0.69 and then fix 
+    padding top to make height 345 px*/
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.about-part p{
+    margin:0;
+}
+
+.about-part .btn-wrap{
+    margin-top:60px;
+}
+
+.products-part{
+    text-align: center;
+}
+
+.products-part h2{
+    line-height: 1;
+    margin-bottom: 17px;
+}
+
+.products-part p{
+    margin: 0 0 15px;
+}
+
+.products-part .style::after{
+    top:-6px;
+}
+
+.product-detail{
+    background-color: #121212;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.product-detail .product-image{
+    height:400px;
+    position: relative;
+}
+
+.product-code{
+    width:62px;
+    height:62px;
+    border-radius: 50%;
+    color: #fff;
+    border:2px solid #b03d42;
+    background-color: #191919;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; */
+    line-height: 62px;
+    text-align: center;
+}

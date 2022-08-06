@@ -1,53 +1,334 @@
 *{
-    box-sizing:border-box;
-
-}.div{    
+    box-sizing: border-box;
+    
 }
 body{
     margin:0;
+    
+    color:#010304;
+    font-size: 17px;
+    line-height: 1.53;
+    font:17px/1.53 'Roboto', sans-serif;
 }
-.holder{
-    background-color:blue;
-    border:2px solid brown;
-    color:pink;
-    width:600px;
-    position:relative;
-    top:-7px;
-    left:auto;
-    right:auto;
-    bottom:auto;
-    padding:60px 50px 30px 20px;
-    margin:40px 30px 10px;
-    overflow:hidden;
-}
-    .left{
-        float:left;
-    }
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
 
-    .right{
-        float: right;
-    }
-
-.tag{
-    display:inline-block;
-    vertical-align: middle;
-    padding:10px;
-    background-color: aqua;
-    border-radius: 30px;
+.banner-part{
+    /* height: 100vh; */
     position: relative;
-    position: absolute;
-    z-index: 4 98;
-    top: 0px;
-    right: 80%;
-    position: sticky;
-    position: static 1px;
-    position: fixed;
-    z-index: 1 2;
-    transform: translate(-50% 50%);
-    margin: 0 0 -25px -25px;
+    background: url('./images/banner-img.png') no-repeat center /cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.two-columns{
-    display:flex;
+.banner-part::before{
+    content:'';
+    height:100vh;
+   
+}
+
+.banner-part::after {
+    content: '';
+    background-color: rgba(191,61,66,1);
+    mix-blend-mode: darken;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    
+}
+
+
+
+.bg-stretch{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* text inside banner part */
+.banner-content{
+    max-width:976px;
+    color:white;
+    position:relative;
+    z-index:9;
+    text-align: center;
+}
+
+.banner-content p{
+    margin:0;
+}
+
+.overline-text{
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 65px;
+    margin:0 0 45px;
+    text-transform: uppercase;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.btn.primary{
+    
+    padding:15px;
+    background-color: #333;
+    border: 2px solid white;
+    color:white;
+    min-width:230px;
+    border-radius: 30px;
+}
+
+.btn.secondary{
+    padding:15px 15px;
+    background-color: rgb(191,61,66);
+    border: 2px solid white;
+    color:white;
+    min-width:180px;
+    border-radius: 30px;
+    margin:20px 0 0 0;
+    
+}
+
+#header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    padding: 15px 50px;
+}
+
+#header .container{
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    order: 0;
+}
+
+.logo a{
+    display: inline-block;
+}
+
+/* about casino */
+
+.container{
+    max-width:1170px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.container.lg{
+    max-width: 1310px;
+}
+
+
+.about-part{
+    padding:120px 0;
+}
+
+h2{
+    font-size:35px;
+    line-height: 2;
+    font-weight: bold;
+    color:#010304;
+    text-transform: uppercase;
+    margin: 0 0 45px;
+}
+
+.style{
+    position: relative;
+    padding-left:44px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.style::after{
+    content:'';
+    width:42px;
+    height:42px;
+    position: absolute;
+    top:10px;
+    left:0;
+    background: url(./images/about-casino-logo.png) no-repeat center/cover;
+    display: block;
+}
+
+.two-columns,
+.four-columns {
+    display: flex;
+    flex-wrap:wrap;
+    margin:0 -20px;
+}
+
+.two-columns .col{
+    width:50%;
+    padding: 0 20px;
+}
+
+.two-columns .col .large-col{
+    width:58.33%;
+}
+
+.two-columns .col .small-col{
+    width:41.66%;
+}
+
+.four-columns .col{
+    width: 280px;
+    padding: 0 15px ;
+    flex:1;
+}
+
+
+.about-part .image-wrap{
+    position: relative;
+    /* dont use height and width  */
+    /* width:500px;
+    height:345px; */
+    padding-top:61%; /* 345(height)/500(width) = 0.69 and then fix 
+    padding top to make height 345 px*/
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.about-part p{
+    margin:0;
+}
+
+
+.about-part .btn-wrap{
+    margin-top:60px;
+}
+
+.products-part{
+    text-align: center;
+}
+
+ .products-part p{
+    margin: 0 0 15px;
+ }
+
+.products-part h2{
+    line-height: 1;
+    margin-bottom: 17px;
+}
+
+.products-part p{
+    margin: 0 0 15px;
+}
+
+.products-part .four-columns{
+    padding: 45px;
+}
+
+.products-part .style::after{
+    top:-6px;
+}
+
+.product-detail{
+    background-color: #121212;
+    border-radius: 23px;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'poppins'sans-serif;
+}
+
+.product-detail .product-image{
+    height:400px;
+    position: relative;
+}
+
+.product-detail .col .product-image{
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+
+.products-part .col:nth-child(2) .product-image{
+    height: 305px;
+}
+
+.products-part .col:nth-child(3) .product-image{
+    height: 250px;
+}
+
+.products-part .col:nth-child(4) .product-image{
+    height: 180px;
+}
+
+
+.product-content{
+    padding: 0 20px 30px;
+    font-size: 14px;
+    line-height: 1.57;
+}
+
+.product-code{
+    width:62px;
+    height:62px;
+    border-radius: 50%;
+    color: #fff;
+    border:2px solid #b03d42;
+    background-color: #191919;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    align-items: center;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; */
+    line-height: 62px;
+    text-align: center;
+    margin:-30px auto 13px;
+    position:relative;
+    z-index: 9; 
+}
+
+.product-detail h3{
+    margin-bottom: 20px;
+}
+
+.products-part .button-wrap {
+    padding: 15px 0;
+
+}
+
+.products-part.btn.primary{
+    border-color: #b03d42;
+}
+
+.tut-part{
+    background-color: #000;
+}
+
+.tut-part h2{
+    color: #fff;
 }
