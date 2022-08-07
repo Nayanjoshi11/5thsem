@@ -8,14 +8,17 @@ h5, .h5,
 h6, .h6,
 .h {
 	font-family: $headings-font-family;
-	font-weight: 400;
-	margin: 0 0 24px;
+	font-weight: 700;
+	margin: 0 0 15px;
 	color: $headings-color;
+	
 }
 
 h1, .h1 {
 	font-size: $h1-font-size-sm;
-
+	text-transform: uppercase;
+	margin-bottom: 45px;
+	color: aliceblue;
 	@include media('>=widescreen') {
 		font-size: $h1-font-size;		
 	}
@@ -23,7 +26,9 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: $h2-font-size-sm;
-
+	text-transform: uppercase;
+	line-height: 2;
+	margin-bottom: 45px;
 	@include media('>=widescreen') {
 		font-size: $h2-font-size;
 	}
@@ -31,7 +36,7 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: $h3-font-size-sm;
-
+	color: white;
 	@include media('>=widescreen') {
 		font-size: $h3-font-size;
 	}

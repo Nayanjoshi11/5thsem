@@ -1,0 +1,116 @@
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    
+    &.lg{
+        max-width: 1310px;
+    }
+}
+
+.style{
+    position: relative;
+    padding-left: 44px;
+    display: inline-block;
+    vertical-align: top;
+    
+    &:after{ 
+        position: absolute;
+        top: 9px;
+        left: 0;
+        content: '';
+        width: 42px;
+        height: 42px;
+        display: block;
+        background: url('') no-repeat center /cover;
+
+    }
+}
+.bg-stretch{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.overline-text {
+    /* font-family: 'Roboto',sans-serif; */
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+
+.btn{
+    text-decoration: none;
+    color: #333333;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    /* font-family: 'Roboto', sans-serif; */
+
+    &.primary{
+        padding: 17px;
+        border: 2px solid #ffff;
+        color: #ffff;
+        background-color: #333333;
+        min-width: 230px;
+        height: 60px;
+       
+        border-radius: 30px;
+        text-transform: uppercase;
+        @include animate(all,0.35s,ease-in-out);
+        &:hover{
+            background-color: $white;
+            color: #333;
+            border-color: #333;
+        }
+    }
+
+    &.secondary{
+        padding: 20px;
+        color: #ffff;
+        background-color: #bf3d42;
+        min-width: 180px;
+        height: 60px;
+        border-radius: 27px;
+        text-transform: uppercase;
+        @include animate(all,0.35s,ease-in-out);
+        &:hover{
+            background-color: $white;
+            color: #bf3d42;
+            border: 2px solid #bf3d42;
+        }
+    }
+}
+.two-columns ,
+.four-columns{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    
+    .col{
+        flex:1;
+        padding: 0 20px;
+        &.large-col{
+            flex:auto;
+            width: 58.33%;
+        }
+        &.small-col{
+            flex: auto;
+            width: 41.66%;
+        }
+    }
+
+}
+.four-columns{
+    margin: 0 -10px;
+
+    .col{
+    padding: 0 10px;
+    }
+}
